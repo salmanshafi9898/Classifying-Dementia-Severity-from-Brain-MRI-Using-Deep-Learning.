@@ -88,3 +88,31 @@ for cfg in experiments:
         dropout=0.5,
         epochs=10
     )
+
+# Cell 6 — Plot loss curves (train vs val) for all models
+
+def plot_histories(results_dict):
+    plt.figure(figsize=(12,5))
+
+    # Loss
+    plt.subplot(1,2,1)
+    for k, r in results_dict.items():
+        plt.plot(r["history"]["train_loss"], label=f"{k} train")
+        plt.plot(r["history"]["val_loss"], linestyle="--", label=f"{k} val")
+    plt.title("Loss curves")
+    plt.xlabel("Epoch"); plt.ylabel("Loss")
+    plt.legend()
+
+    # Accuracy
+    plt.subplot(1,2,2)
+    for k, r in results_dict.items():
+        plt.plot(r["history"]["train_acc"], label=f"{k} train")
+        plt.plot(r["history"]["val_acc"], linestyle="--", label=f"{k} val")
+    plt.title("Accuracy curves")
+    plt.xlabel("Epoch"); plt.ylabel("Accuracy")
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
+
+plot_histories(results)
