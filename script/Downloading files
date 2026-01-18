@@ -1,7 +1,7 @@
-Downloading files using Kaggle json API
+/*Downloading files using Kaggle json API
 
 
-from google.colab import files
+from google.colab import files */
 
 # Select kaggle.json file
 uploaded = files.upload()
