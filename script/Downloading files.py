@@ -1,4 +1,4 @@
-/* Downloading files using Kaggle json API */
+""" Downloading files using Kaggle json API """
 
 
 from google.colab import files 
