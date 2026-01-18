@@ -1,4 +1,5 @@
-/* We use ImageFolder on data/MRI_IMAGES, which has 4 folders: Mild Dementia, Moderate Dementia, Non Demented, Very mild Dementia.
+"""
+We use ImageFolder on data/MRI_IMAGES, which has 4 folders: Mild Dementia, Moderate Dementia, Non Demented, Very mild Dementia.
 
 ImageFolder:
 
@@ -22,7 +23,7 @@ the total number of slices (len(base_dataset))
 
 one example sample to confirm the filename format.
 
-Goal of Part 1: Create a single object that contains all slices + labels, so we can then organize them by patient.*/
+Goal of Part 1: Create a single object that contains all slices + labels, so we can then organize them by patient """
 
 import random
 from collections import defaultdict
