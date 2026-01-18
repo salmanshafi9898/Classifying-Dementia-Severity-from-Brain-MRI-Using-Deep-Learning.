@@ -9,7 +9,7 @@ Mild dementia
 Moderate dementia
 About 80,000 MRI slices in total from around 461 patients. Slices are taken from the middle portion of the brain volume (e.g. slice indices 100–160) to focus on informative regions They organized them into 4 class folders (one per condition) when preparing for training.
 
-So, it’s a big set of 2D brain slices, not raw 3D medical volumes.""
+So, it’s a big set of 2D brain slices, not raw 3D medical volumes. ""
 
 # Import libraries
 import torch
