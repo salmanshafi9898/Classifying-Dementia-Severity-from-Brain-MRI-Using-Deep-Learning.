@@ -11,4 +11,30 @@ About 80,000 MRI slices in total from around 461 patients. Slices are taken from
 
 So, it’s a big set of 2D brain slices, not raw 3D medical volumes.""
 
+# Import libraries
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+from torchvision import datasets
+import torchvision.transforms as transforms
+from torch.utils.data.sampler import SubsetRandomSampler
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+from PIL import Image
+import os
+from torch.utils.data import DataLoader, WeightedRandomSampler
+import shutil
+
+# check if CUDA is available
+train_on_gpu = torch.cuda.is_available()
+
+if not train_on_gpu:
+    print('CUDA is not available.  Training on CPU ...')
+else:
+    print('CUDA is available!  Training on GPU ...')
+
+from google.colab import drive
+drive.mount('/content/drive')
 
