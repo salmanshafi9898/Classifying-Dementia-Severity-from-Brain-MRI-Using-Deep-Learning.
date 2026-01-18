@@ -1,5 +1,5 @@
-Viewing raw images
-Let's view what our images look like raw so we can decide on how to transform and normalize them.
+""" Viewing raw images
+Let's view what our images look like raw so we can decide on how to transform and normalize them."""
 
 sample_dir = "data/Data/Non Demented"   # pick any class folder
 sample_files = os.listdir(sample_dir)
